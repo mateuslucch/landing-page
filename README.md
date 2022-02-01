@@ -4,3 +4,6 @@ From The Odin Project's [curriculum](https://www.theodinproject.com/paths/founda
 
 Project to show my skills in html and css foundations.
 Github link to working website: [Landing Page](https://mateuslucch.github.io/landing-page/)
+
+Images from:
+https://unsplash.com

@@ -1,81 +1,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
 
-/* rever importação de fonte*/
-body {
-    color: #f9faf8;
-    font-family: 'Roboto';
-    margin: 0;
+:root {
+    --light-border-color: #edf5e1;
+    --button-background-color: #05386b;
+    --dark-background: #379683;
+    --light-background: #5cdb95;
+    --text-color: #edf5e1;
+    --dark-text-color: #05386b;
 }
 
-.body-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+/* rever importação de fonte*/
+body {
+    color: var(--text-color);
+    font-family: 'Roboto';
+    margin: 0;
 }
 
 /* header*/
 .header {
     font-size: 24px;
-    padding: 0px 200px;
+    padding: 5px 300px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1f2937;
+    background-color: var(--dark-background);
 }
 
 ul {
-    display: flex;
     font-size: 12px;
     list-style: none;
+    display: flex;
     gap: 15px;
 }
 
 a {
-    color: #e5e7eb;
+    color: var(--text-color);
     text-decoration: none;
 }
 
 /* intro box*/
 #intro-box {
-    background-color: #1f2937;
+    background-color: var(--dark-background);
     height: 250px;
-    padding: 50px 200px;
+    padding: 50px 300px;
     display: flex;
     gap: 15px;
-}
-
-.title {
-    font-size: 48px;
-    font-weight: 800;
-    text-align: left;
 }
 
 .left-block {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    flex: 1 1 100%;
+    gap: 15px;    
+}
+
+.title {
+    font-size: 3vw;
+    font-weight: 800;
+    text-align: left;
 }
 
 .image {
-    background-color: gray;
+    /*     background-color: gray; */
     display: flex;
-    flex: 1 1 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.image img {
+    max-width: 80%;    
+    margin: auto;
+    border-color: var(--light-border-color);
+    border-style: solid;
+    border-radius: 12px;
 }
 
 /* content elements*/
 .content {
-    padding: 50px 200px;
+    padding: 50px 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #1f2937;
+    color: var(--button-background-color);
 }
 
 .content-title {
     font-weight: 800;
     font-size: 36px;
-    color: #1f2937;
+    color: var(--dark-text-color);
 }
 
 .images-text-list {
@@ -87,21 +98,24 @@ a {
 .link-something {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     width: 125px;
     height: auto;
 }
 
 .random-image {
-    border: 3px solid #3882f6;
-    border-radius: 12px;
-
-    width: 130px;
-    height: 130px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+}
+
+.random-image img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border: 3px solid var(--button-background-color);
+    border-radius: 12px;
 }
 
 .text-image {
@@ -109,20 +123,20 @@ a {
 }
 
 button {
-    background-color: #3882f6;
+    background-color: var(--button-background-color);
     border-style: none;
     border-radius: 5px;
     width: 100px;
     height: 25px;
-    color: #e5e7eb;
+    color: var(--text-color);
 }
 
 /* quotes */
 .quotes {
-    background-color: #e5e7eb;
-    color: #1f2937;
+    background-color: var(--light-background);
+    color: var(--dark-text-color);
     max-height: 200px;
-    padding: 100px 300px;
+    padding: 100px 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -131,7 +145,7 @@ button {
 }
 
 .quote {
-    font-size: 36px;
+    font-size: 2vw;
     font-style: italic;
     font-weight: 300;
 }
@@ -144,20 +158,18 @@ button {
 /*call action*/
 .call-action-box {
     padding: 40px 100px;
-    background-color: #3882f6;
-    color: #f9faf8;
+    background-color: var(--light-background);
+    color: var(--text-color);
     border-radius: 5px;
     margin: 125px 200px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-content: center;
-    gap: 8px;
-
+    gap: 50px;
 }
 
 .call-action-box button {
-    border-style: solid;
-    border-color: #e5e7eb;
+    border: 1px solid var(--text-color);
     justify-content: flex-end;
     align-self: center;
 }
@@ -177,5 +189,5 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1f2937;
+    background-color: var(--dark-text-color);
 }
